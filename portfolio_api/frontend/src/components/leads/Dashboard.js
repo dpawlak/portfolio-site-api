@@ -4,11 +4,9 @@ import Leads from './Leads'
 
 export default function Dashboard() {
     return (
-        <div>
-            <Fragment>
-                <Form />
-                <Leads />
-            </Fragment>
-        </div>
+        <Fragment>
+            <Form />
+            <Leads />
+        </Fragment>  
     )
 }
