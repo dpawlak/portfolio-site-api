@@ -8,20 +8,25 @@ export class Form extends Component {
     state = {
         name:'',
         email:'',
-        message:''
+        message:'',
     }
 
-    staticPropTypes = {
-        addLead: PropTypes.func.isRequired
+    static propTypes = {
+        addLead: PropTypes.func.isRequired,
     }
 
-    onChange = e => this.setState({ [e.target.name]: e.target.value })
+    onChange = (e) => this.setState({ [e.target.name]: e.target.value })
 
-    onSubmit = e => {
+    onSubmit = (e) => {
         e.preventDefault()
         const { name, email, message } = this.state
         const lead = { name, email, message }
         this.props.addLead(lead)
+        this.setState({
+            name:'',
+            email:'',
+            message:'',
+        })
     }
 
     render() {
@@ -33,21 +38,21 @@ export class Form extends Component {
             <div className="form-group">
                 <label>Name</label>
                 <input
-                className="form-control"
-                type="text"
-                name="name"
-                onChange={this.onChange}
-                value={name}
+                    className="form-control"
+                    type="text"
+                    name="name"
+                    onChange={this.onChange}
+                    value={name}
                 />
             </div>
             <div className="form-group">
                 <label>Email</label>
                 <input
-                className="form-control"
-                type="email"
-                name="email"
-                onChange={this.onChange}
-                value={email}
+                    className="form-control"
+                    type="email"
+                    name="email"
+                    onChange={this.onChange}
+                    value={email}
                 />
             </div>
             <div className="form-group">
@@ -62,7 +67,7 @@ export class Form extends Component {
             </div>
             <div className="form-group">
                 <button type="submit" className="btn btn-primary">
-                Submit
+                    Submit
                 </button>
             </div>
         </form>
