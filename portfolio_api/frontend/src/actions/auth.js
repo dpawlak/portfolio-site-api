@@ -107,7 +107,7 @@ export const tokenConfig = getState => {
     // Headers
     const config = {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json:charset=utf-8' 
         }
     }
     // If token, add to headers config

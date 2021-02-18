@@ -17,7 +17,7 @@ SECRET_KEY = 'em2(dm8ls@4@%j7cnf@yq3q$&t-muq_g39skhb$8o2r%u(()k%'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://blooming-citadel-88405.herokuapp.com', '127.0.0.1'
+    'secret-atoll-96203.herokuapp.com', '127.0.0.1'
 ]
 
 
